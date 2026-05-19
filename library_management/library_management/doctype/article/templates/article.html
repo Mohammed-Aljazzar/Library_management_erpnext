@@ -1,0 +1,25 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<img src="{{ image }}" alt="{{ title }}">
+
+<h1>{{ title }}</h1>
+
+<p>By {{ author }}</p>
+
+{% if status == "Available" %}
+    <p>Available</p>
+{% elif status == "Issued" %}
+    <p>Issued</p>
+{% endif %}
+
+<p>Publisher: <b>{{ publisher }}</b></p>
+
+<p>ISBN: <b>{{ isbn }}</b></p>
+
+<div>
+    {{ description }}
+</div>
+
+{% endblock %}
