@@ -6,7 +6,9 @@
  "engine": "InnoDB",
  "field_order": [
   "loan_period",
-  "maximum_number_of_issued_articles"
+  "maximum_number_of_issued_articles",
+  "fine_per_day",
+  "block_issue_if_overdue"
  ],
  "fields": [
   {
@@ -18,6 +20,17 @@
    "fieldname": "maximum_number_of_issued_articles",
    "fieldtype": "Int",
    "label": "Maximum Number of Issued Articles"
+  },
+  {
+   "fieldname": "fine_per_day",
+   "fieldtype": "Currency",
+   "label": "Fine Per Overdue Day"
+  },
+  {
+   "default": "1",
+   "fieldname": "block_issue_if_overdue",
+   "fieldtype": "Check",
+   "label": "Block Issue If Member Has Overdue Articles"
   }
  ],
  "grid_page_length": 50,

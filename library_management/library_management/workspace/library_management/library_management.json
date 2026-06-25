@@ -1,0 +1,160 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"library-card-total\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Articles\",\"col\":3}},{\"id\":\"library-card-available\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Available Articles\",\"col\":3}},{\"id\":\"library-card-issued\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Issued Articles\",\"col\":3}},{\"id\":\"library-card-overdue\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Overdue Issues\",\"col\":3}},{\"id\":\"library-shortcuts-header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"library-shortcut-article\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Article\",\"col\":3}},{\"id\":\"library-shortcut-member\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Member\",\"col\":3}},{\"id\":\"library-shortcut-transaction\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Transaction\",\"col\":3}},{\"id\":\"library-shortcut-membership\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Library Membership\",\"col\":3}},{\"id\":\"library-spacer\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"library-documents-header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Library Documents</b></span>\",\"col\":12}},{\"id\":\"library-card-catalog\",\"type\":\"card\",\"data\":{\"card_name\":\"Catalog\",\"col\":4}},{\"id\":\"library-card-members\",\"type\":\"card\",\"data\":{\"card_name\":\"Members\",\"col\":4}},{\"id\":\"library-card-operations\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"library-card-settings\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "book-open",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Library Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Catalog",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Article",
+   "link_count": 0,
+   "link_to": "Article",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Members",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Member",
+   "link_count": 0,
+   "link_to": "Library Member",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Membership",
+   "link_count": 0,
+   "link_to": "Library Membership",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operations",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Transaction",
+   "link_count": 0,
+   "link_to": "Library Transaction",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Setting",
+   "link_count": 0,
+   "link_to": "Library Setting",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "module": "Library Management",
+ "name": "Library Management",
+ "number_cards": [
+  {
+   "label": "Total Articles",
+   "number_card_name": "Total Articles"
+  },
+  {
+   "label": "Available Articles",
+   "number_card_name": "Available Articles"
+  },
+  {
+   "label": "Issued Articles",
+   "number_card_name": "Issued Articles"
+  },
+  {
+   "label": "Overdue Issues",
+   "number_card_name": "Overdue Issues"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "format": "{} Available",
+   "label": "Article",
+   "link_to": "Article",
+   "stats_filter": "{\n    \"status\": \"Available\"\n}",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "format": "{} Members",
+   "label": "Library Member",
+   "link_to": "Library Member",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "{} Open",
+   "label": "Library Transaction",
+   "link_to": "Library Transaction",
+   "stats_filter": "{\n    \"status\": [\"in\", [\"Open\", \"Overdue\"]],\n    \"docstatus\": 1\n}",
+   "type": "DocType"
+  },
+  {
+   "label": "Library Membership",
+   "link_to": "Library Membership",
+   "type": "DocType"
+  }
+ ],
+ "title": "Library Management"
+}

@@ -90,6 +90,7 @@
    "report": 1,
    "role": "Librarian",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

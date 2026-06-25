@@ -50,8 +50,10 @@
    "label": "ISBN"
   },
   {
+   "default": "Available",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Issued\nAvailable"
   },

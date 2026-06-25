@@ -83,7 +83,7 @@ app_license = "mit"
 # ------------
 
 # before_install = "library_management.install.before_install"
-# after_install = "library_management.install.after_install"
+after_migrate = "library_management.library_management.doctype.library_transaction.library_transaction.sync_library_transaction_statuses"
 
 # Uninstallation
 # ------------
@@ -148,23 +148,11 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"library_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"library_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"library_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"library_management.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"library_management.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+		"library_management.library_management.doctype.library_transaction.library_transaction.update_overdue_transactions"
+	],
+}
 
 # Testing
 # -------
@@ -246,4 +234,3 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

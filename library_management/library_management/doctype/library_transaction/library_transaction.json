@@ -9,7 +9,12 @@
   "article",
   "library_member",
   "type",
-  "date"
+  "date",
+  "due_date",
+  "status",
+  "overdue_days",
+  "fine_amount",
+  "returned_on"
  ],
  "fields": [
   {
@@ -29,17 +34,57 @@
    "reqd": 1
   },
   {
+   "default": "Issue",
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
-   "options": "Issue\nReturn"
+   "options": "Issue\nReturn",
+   "reqd": 1
   },
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "read_only": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nOverdue\nReturned",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overdue_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Overdue Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fine_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fine Amount",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Return' || doc.returned_on",
+   "fieldname": "returned_on",
+   "fieldtype": "Date",
+   "label": "Returned On",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -76,6 +121,7 @@
    "report": 1,
    "role": "Librarian",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
